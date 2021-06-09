@@ -1,6 +1,6 @@
 {
-    "name": "cookbook2",
-    "short_name": "cookbook2",
+    "name": "cookbook",
+    "short_name": "cookbook",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
