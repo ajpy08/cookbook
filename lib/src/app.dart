@@ -8,7 +8,21 @@ class CookBook extends StatelessWidget {
       title: 'Flutter Demo',
       //home: MyHomePage(),
       initialRoute: '/',
-      routes: {'/': (BuildContext context) => LoginPage()},
+      theme: ThemeData(
+          brightness: Brightness.light,
+          primaryColor: Colors.cyan,
+          accentColor: Colors.cyan[300]),
+      onGenerateRoute: (RouteSettings settings) {
+        return MaterialPageRoute(builder: (BuildContext context) {
+          switch (settings.name) {
+            case "/":
+              return LoginPage();
+            default:
+              return LoginPage();
+          }
+        });
+      },
+      // routes: {'/': (BuildContext context) => LoginPage()},
     );
   }
 }
