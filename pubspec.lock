@@ -62,6 +62,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_modulo1_fake_backend:
+    dependency: "direct main"
+    description:
+      path: "../flutter_modulo1_fake_backend"
+      relative: true
+    source: path
+    version: "0.0.1"
   flutter_test:
     dependency: "direct dev"
     description: flutter
