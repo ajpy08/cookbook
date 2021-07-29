@@ -30,6 +30,8 @@ dependencies:
   flutter_modulo1_fake_backend:
     path: ../flutter_modulo1_fake_backend
 
+  image_picker: ^0.5.0+9
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -39,6 +39,9 @@ class ImagePickerWidget extends StatefulWidget {
     );
   }
 
+  @override
+  _ImagePickerWidgetState createState() => _ImagePickerWidgetState();
+
   _showPickerOptions(BuildContext context) {
     showDialog(context: context, builder: (BuildContext context) {
       return SimpleDialog(
@@ -46,31 +49,27 @@ class ImagePickerWidget extends StatefulWidget {
         title: Text('Camara'),
         onTap: () {
           Navigator.pop(context);
-          _showPickImage(context, ImageSource.camera);
+          _showPickerOptions(context, ImageSource.camera);
         },
         ),
         ListTile(leading: Icon(Icons.image),
         title: Text('Galeria'),
         onTap: () {
           Navigator.pop(context);
-          _showPickImage(context, ImageSource.gallery);
+          _showPickImage(context, ImageSource.gallery)
         },
         ),
         ],
       );
-    },
-    );
-}
+    });
+  }
 
-@override
-  _ImagePickerWidgetState createState() => _ImagePickerWidgetState();
+  void _showPickImage(BuildContext context, ImageSource gallery) {}
+}
 
 class _ImagePickerWidgetState extends State<ImagePickerWidget> {
   @override
   Widget build(BuildContext context) {
     return Container();
   }
-}
-
-void _showPickImage(BuildContext context, camera) {}
 }
